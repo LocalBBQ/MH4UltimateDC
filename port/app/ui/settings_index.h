@@ -97,6 +97,7 @@ enum class RowId : int {
     GraphicsHaze,
     TouchScreens,
     TouchOverlay,
+    TouchShow,
     TouchCorner,
     TouchSize,
     TouchOpacity,

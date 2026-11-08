@@ -223,7 +223,7 @@ def test_texts_ascii_and_short(rows, sections):
 
 # mh4u.ini's keys the menu writes (Menu::SetGame), as before the reorganisation
 GAME_KEYS = {"fps", "refresh_rate", "widescreen", "wide_render", "hud_edges", "touch_overlay", "quest_overlay",
-             "target_overlay", "kick", "target", "skip", "skip_end", "skip_end_hold", "skip_hint", "dither",
+             "target_overlay", "touch_screen", "kick", "target", "skip", "skip_end", "skip_end_hold", "skip_hint", "dither",
              "stereo_3d", "antialiasing", "bloom", "depth_of_field", "motion_blur", "radial_blur", "haze",
              "net_sync"}
 # mh4u-app.ini's settings the menu changes: those of before, custom_textures and launcher, and the

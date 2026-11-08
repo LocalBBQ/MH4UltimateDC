@@ -28,7 +28,7 @@ void SetWindowSize(u32 width, u32 height);
 /// player of a session at another frame rate once everyone is in, say; the app's in-game
 /// menu). Only options that the hooks read as the game runs can change: fps, refresh_rate,
 /// dither, render_flags_set, render_flags_clear, kick, target, skip, skip_panel, skip_hint,
-/// touch_overlay, quest_overlay, target_overlay (these redo the screen layout at once),
+/// touch_overlay, quest_overlay, target_overlay, touch_screen (these redo the screen layout at once),
 /// hud_edges, the screen filters (bloom, motion_blur, depth_of_field, radial_blur, haze) and
 /// the trace_* options. Call it on the emulation thread. Returns false for any other key.
 bool SetOption(const std::string& key, const std::string& value);
@@ -62,7 +62,10 @@ int SkipHint();
 /// PressQuestMapKey.)
 void ToggleQuestMap();
 
-/// The app's touch-screen key (and a controller's right-stick click): ToggleQuestMap, unless
+/// The app's touch-screen key (and a controller's right-stick click). With touch_screen = map
+/// outside quests, or hidden, it shows or hides the touch overlay (TouchScreen::PressKey; in a
+/// quest with hidden, presses go round the map, the whole touch screen and hidden) and returns
+/// what it did. Otherwise: ToggleQuestMap, unless
 /// the map view can't show (MapView::PressKey: the screens, the touch overlay or quest_overlay
 /// off, a code library too old, a panel layout without the map panel). Then the press asks for
 /// the map, for when it can show, and returns why nothing changes, a short line for the screen;

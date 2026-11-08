@@ -30,6 +30,8 @@ add_library(mh4u_backend STATIC
     src/map_view.h
     src/netsync.cpp
     src/netsync.h
+    src/touch_screen.cpp
+    src/touch_screen.h
 )
 target_include_directories(mh4u_backend PUBLIC src PRIVATE "${MH4U_RUNTIME_DIR}")
 target_link_libraries(mh4u_backend PUBLIC citra_core citra_common network)

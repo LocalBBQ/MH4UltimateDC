@@ -18,6 +18,7 @@
 #include "hooks.h"
 #include "input.h"
 #include "speed.h"
+#include "touch_screen.h"
 #include "ui/fps_counter.h"
 #include "ui/key_guides.h"
 #include "ui/layer.h"
@@ -370,6 +371,14 @@ void Menu::DrawTouchScreen() {
                 write();
             }
             EndRow(R::TouchOverlay);
+        }
+        if (BeginRow(R::TouchShow)) {
+            // mh4u.ini's touch_screen: shown, map, hidden, in that order
+            int show = static_cast<int>(Port::TouchScreen::Parse(Game("touch_screen")));
+            if (Choose("##touch_screen", show, {"Always", "Only in quests", "Only when needed"})) {
+                SetGame("touch_screen", Port::TouchScreen::Name(static_cast<Port::TouchScreen::Mode>(show)));
+            }
+            EndRow(R::TouchShow);
         }
         if (BeginRow(R::TouchCorner)) {
             int corner = static_cast<int>(overlay.corner);

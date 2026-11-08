@@ -170,6 +170,11 @@ const Row ROWS[] = {
      "with fixed places.",
      "touch screen over the game overlay corner bottom screen show hide over the game in a corner game", "", "",
      false, false, "mh4u.ini touch_overlay"},
+    {"touch.show", "touch.corner", S, "Show the touch screen", nullptr,
+     "For one screen: always, only in quests, or only when the game needs it (quest menu, big panels) and when "
+     "the map key asks.",
+     "show hide hidden touch screen single screen one screen only when needed auto in quests second screen game",
+     "touch.overlay", "Touch screen over the game is on", false, false, "mh4u.ini touch_screen"},
     {"touch.corner", "touch.corner", S, "Corner", nullptr,
      "The corner it sits in. The item bar is at the bottom right of the game's screen: choose the corner that "
      "hides the least.",

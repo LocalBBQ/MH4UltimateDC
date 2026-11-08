@@ -198,6 +198,10 @@ quest_overlay = map
 # the target) in a small view of its own, if your panel layout has it: on = under the map at
 # the touch screen's scale, on 12 at 100 30 = 12% of the window's height, placed as above; off
 target_overlay = on
+# when that corner is there at all, for playing on one screen: shown (always), map (only in
+# quests; elsewhere F12 shows and hides it), hidden (only for the quest menu and big panels such
+# as the full map; F12 shows it, and in quests goes round the map, the whole touch screen, hidden)
+touch_screen = shown
 
 # buttons for the kick and the target camera, touch-screen panels on a 3DS
 # (A B X Y L R ZL ZR START UP DOWN LEFT RIGHT; ZL and ZR are a controller's triggers)
